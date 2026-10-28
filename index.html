@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow"><title>Revisión Puebla y Bayamón</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f3f2f0;--panel:#fff;--ink:#16161a;--ink2:#4a4a52;--muted:#7c7c85;--line:#e1dfda;--oro:#a8842f;--ok:#1d7a4a;--ok-s:#e3f3ea;--warn:#9a6a00;--warn-s:#fbf1d9;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111113;--panel:#1b1b1f;--ink:#f2f1ee;--ink2:#c6c5c0;--muted:#8d8c88;--line:#2e2e33;--oro:#d2ad55;--ok:#5cc98c;--ok-s:#14301f;--warn:#e7b84a;--warn-s:#352a10;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111113;--panel:#1b1b1f;--ink:#f2f1ee;--ink2:#c6c5c0;--muted:#8d8c88;--line:#2e2e33;--oro:#d2ad55;--ok:#5cc98c;--ok-s:#14301f;--warn:#e7b84a;--warn-s:#352a10;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Barlow",system-ui,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:18px;padding-block:26px 60px}
+h1,h2,h3{font-family:"Barlow Condensed","Barlow",system-ui,sans-serif;margin:0;line-height:1.1;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,46px);text-transform:uppercase}h2{font-size:34px;text-transform:uppercase}h3{font-size:20px;letter-spacing:.4px}
+.eyebrow{font:600 13px/1 "Barlow",sans-serif;letter-spacing:2.5px;text-transform:uppercase;color:var(--oro);margin-bottom:10px}
+.lead{color:var(--ink2);font-size:18px;margin:10px 0 0;max-width:70ch}
+.resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
+.resumen div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.resumen b{display:block;font:700 15px "Barlow Condensed",sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:8px;padding-block:12px;margin-top:22px;border-bottom:1px solid var(--line)}
+.tabs button{font:700 18px "Barlow Condensed",sans-serif;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--line);background:var(--panel);color:var(--ink2);padding:9px 20px;border-radius:8px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.ficha{margin:22px 0 6px}.ficha p{margin:4px 0 0;color:var(--ink2)}.ficha .plan{color:var(--muted);font-size:15px}
+.ad{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-top:16px;overflow:hidden}
+.ad header{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.num{font:700 16px "Barlow Condensed",sans-serif;background:var(--ink);color:var(--bg);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;flex:none}
+.estado{margin-left:auto;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--ok-s);color:var(--ok);white-space:nowrap}
+.ad.pend .estado{background:var(--warn-s);color:var(--warn)}
+.cuerpo{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:20px;padding:16px}
+.media{min-width:0}.media img{display:block;width:100%;height:auto;border-radius:8px}
+.media img.v{max-width:240px}
+.falta{margin-top:8px;font-size:14px;color:var(--warn)}
+.carr{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+.carr img{width:78%;flex:none;scroll-snap-align:start}
+.copy{min-width:0}.lbl{font:600 12px "Barlow",sans-serif;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);margin-top:12px}
+.lbl:first-child{margin-top:0}.copy p{margin:4px 0 0}.tp{font-size:15.5px}.tit{font-weight:600}
+.btn{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:3px 12px;font-weight:600;font-size:14px}
+@media (max-width:720px){.cuerpo{grid-template-columns:1fr}.media img{max-width:420px}}
+footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+
+.hint{text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted)}
+.nota[hidden]{display:none}
+.ph{aspect-ratio:9/16;max-width:220px;border-radius:10px;background:#111;color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:6px;text-align:center;padding:16px}
+.ph b{font:700 22px "Barlow Condensed",sans-serif;letter-spacing:1px;text-transform:uppercase}.ph span{font-size:14px;color:#c9a34e}
+.ed{border:1px dashed var(--line);border-radius:8px;padding:8px 10px;margin-top:4px;outline:none;white-space:pre-wrap}
+.ed:focus{border-color:var(--oro);border-style:solid}
+.ed.cambiado{border-color:var(--warn);border-style:solid}
+.acciones{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.acciones button,.nota button,.todo button{font:600 15px "Barlow",sans-serif;border-radius:8px;padding:9px 16px;cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.acciones .aprobar{background:var(--ok);border-color:var(--ok);color:#fff}
+.acciones .aprobar.copy{background:var(--warn);border-color:var(--warn)}
+.nota{margin-top:10px;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.nota textarea{font:15px "Barlow",sans-serif;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);width:100%}
+.aviso{margin:8px 0 0;font-size:14px;color:var(--ok);min-height:1em}
+.ad.aprobado{border-color:var(--ok);box-shadow:0 0 0 1px var(--ok)}
+.ad.aprobado .estado{background:var(--ok-s);color:var(--ok)}
+.segm{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--oro);border-radius:10px;padding:14px 16px;margin:14px 0 4px}
+.segm-t{display:block;font:700 13px "Barlow Condensed",sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.segm dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0}
+.segm dt{font-weight:600;color:var(--ink)}.segm dd{margin:0;color:var(--ink2)}.segm a{color:var(--oro)}
+@media (max-width:560px){.segm dl{grid-template-columns:1fr}.segm dd{margin-bottom:6px}}
+.presu{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:14px 0 4px}
+.presu div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.presu b{font:700 13px "Barlow Condensed",sans-serif;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted)}
+.presu .big{font:700 28px/1.1 "Barlow Condensed",sans-serif;color:var(--ink)}
+.presu small{color:var(--muted);font-size:13.5px;line-height:1.4}.presu .hist{color:var(--ink2);font-size:14px}
+.todo{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:14px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--panel)}
+.todo .cuenta{font-weight:600}.todo button{background:var(--ok);border-color:var(--ok);color:#fff}
+.como{margin-top:14px;font-size:15px;color:var(--ink2);max-width:80ch}
+
+.idi{font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+.ad-video{background:var(--panel);border:1px dashed var(--line);border-radius:14px;margin-top:16px;overflow:hidden}
+.ad-video header{display:flex;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.estado.pendv{background:var(--warn-s);color:var(--warn)}
+.ad-video .copy p{color:var(--ink2);margin:0}
+.ad-video .ph{max-width:150px}
+.confirmar{background:var(--warn-s);color:var(--ink);border-left:4px solid var(--warn);border-radius:10px;padding:12px 16px;margin-top:16px}
+</style></head><body><div class="wrap">
+<div class="eyebrow">Juventus ID Camps 2026-27 · Meta Ads · Para aprobar</div>
+<h1>Puebla y Bayamón: anuncios para revisar</h1>
+<p class="lead">Puebla es el ID Camp nuevo de México (14 al 16 de diciembre) y Bayamón ya está listo para encenderse. Cada anuncio se muestra con su pieza y su texto, tal como se montaría en Meta. Los textos se pueden corregir aquí mismo y cada anuncio se aprueba con un clic.</p>
+<p class="como"><b>Piezas:</b> el mismo esquema de las demás sedes: Hero, video de Jesús, Coaches, Un día en el ID Camp, Así se vivió y Juventus Way. Niños en acción con la camiseta 2026-27. En Puebla se usan fotos reales de los camps de Juventus en México, con el volcán Popocatépetl y las cúpulas de Puebla de fondo; en Bayamón, fotos reales de Puerto Rico.</p>
+<p class="como"><b>Segmentación:</b> 25 millas alrededor de cada sede y padres de 30 a 55 años, como en las demás sedes. El detalle y el presupuesto están en la pestaña de cada sede.</p>
+<div class="confirmar"><b>Por confirmar en Puebla:</b> el nombre de la sede. En el sistema de inscripción aparece como "Colegio SN Angel"; en las piezas y los textos se puso <b>Colegio San Ángel</b>. Si el nombre correcto es otro, basta con dejar una nota en el anuncio 1 de Puebla. También el presupuesto diario.</div>
+<div class="resumen">
+  <div><b>Listos</b>5 imágenes por sede con su texto: Hero, Coaches, Un día, Así se vivió y Juventus Way.</div>
+  <div><b>Falta</b>El video de Jesús de cada sede (anuncio 2). Se agrega aquí apenas esté editado.</div>
+  <div><b>Pendiente por aprobar</b>Los 10 anuncios de imagen: pieza y texto.</div>
+</div>
+<p class="como"><b>Cómo aprobar:</b> si el texto está bien, botón <b>Aprobar</b>. Para corregir el texto o el título se escribe directamente sobre ellos; el botón pasa a <b>Aprobar con texto corregido</b> y se guarda la versión nueva. También se puede dejar una nota sin aprobar. Todo queda registrado.</p>
+<div class="tabs" role="group" aria-label="Sede"><button type="button" data-s="pue" aria-pressed="true">Puebla</button><button type="button" data-s="bay" aria-pressed="false">Bayamón</button></div>
+<section id="pue" class="sede" >
+  <div class="ficha"><h2>Puebla</h2><p>14–16 de diciembre · 3:00 – 5:00 PM · Colegio San Ángel, Puebla, Pue. · Niños y niñas de 6 a 17 años</p><p class="plan">Todo en español de México, con el mismo modelo que Monterrey.</p>
+  </div>
+  <div class="segm"><b class="segm-t">Cómo se configura en Meta (igual que las demás sedes)</b>
+    <dl>
+      <dt>Ubicación</dt><dd>Radio de <b>25 millas</b> alrededor del Colegio San Ángel (Tlaxcalancingo, San Andrés Cholula) (<a href="https://www.google.com/maps?q=Av.+Orión+Sur+1549,+Tlaxcalancingo,+Puebla" target="_blank" rel="noopener">ver el punto en el mapa</a>). Cubre la ciudad de Puebla, San Andrés Cholula y San Pedro Cholula.</dd>
+      <dt>A quién</dt><dd>Personas que viven en esa zona o que estuvieron allí hace poco.</dd>
+      <dt>Edad</dt><dd>Padres de <b>30 a 55 años</b> como público sugerido. Meta puede mostrarlo a otras edades si encuentra familias interesadas (Advantage+), igual que en las otras sedes.</dd>
+      <dt>Dónde se ve</dt><dd>Solo Facebook e Instagram: feed, historias y reels.</dd>
+      <dt>Objetivo</dt><dd>Registros en la web de la sede (botón Register Now), medidos con el píxel.</dd>
+      <dt>Cuenta</dt><dd>Juventus Camps MX (cuenta de México), en la misma campaña de Monterrey.</dd>
+      <dt>Fechas</dt><dd>Desde que se encienda (apenas se apruebe) hasta el 14 de diciembre, día en que empieza el camp.</dd>
+    </dl>
+  </div>
+  <div class="presu">
+    <div><b>Presupuesto</b><span class="big">Por definir</span><small>Monterrey corre con USD 24 al día en la cuenta de México. Se propone definirlo con Alessandro.</small></div>
+    <div><b>Referencia</b><small class="hist">En la base de los camps de verano de México 2024-2026 hay 152 familias de la zona de Puebla (58 pagaron alguna vez): reciben el plan de correos de México.</small></div>
+  </div>
+  <article class="ad" data-id="PUE_1">
+  <header><span class="num">1</span><h3>HERO-POSTER (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/PUE_1.jpg" alt="HERO-POSTER (Imagen) · Puebla"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">ATENCIÓN PUEBLA 👉 El Juventus ID Camp llega a Puebla el 14, 15 y 16 de diciembre.<br><br>Son tres días entrenando con coaches de Juventus Academy que vienen desde Italia, con la misma metodología con la que Juventus forma a los jugadores de su academia en Italia: trabajo físico, técnico y táctico, adaptado a cada edad.<br><br>📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM<br>📍 Colegio San Ángel, Puebla, Pue.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Juventus ID Camp · Puebla, 14–16 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad-video">
+  <header><span class="num">2</span><h3>VIDEO JESÚS (Video)</h3><span class="estado pendv">Pendiente</span></header>
+  <div class="cuerpo"><div class="media"><div class="ph"><b>Video de Jesús</b><span>Puebla</span></div></div>
+  <div class="copy"><p>El video de Jesús para Puebla todavía no está editado. Se agrega a esta página para aprobarlo junto con su texto apenas esté listo.</p></div></div>
+</article><article class="ad" data-id="PUE_3">
+  <header><span class="num">3</span><h3>STATIC COACHES (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/PUE_3.jpg" alt="STATIC COACHES (Imagen) · Puebla"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Los coaches de Juventus Academy viajan desde Italia para entrenar a tu hijo o hija, sin salir de Puebla. 🇮🇹⚽<br><br>Durante tres días, cada sesión sigue la metodología Juventus y cada jugador recibe atención individual de los coaches.<br><br>📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM<br>📍 Colegio San Ángel, Puebla, Pue.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Coaches desde Italia · 14–16 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="PUE_4">
+  <header><span class="num">4</span><h3>STATIC UN DÍA EN EL ID CAMP (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/PUE_4.jpg" alt="STATIC UN DÍA EN EL ID CAMP (Imagen) · Puebla"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Así es un día en el Juventus ID Camp ⚽<br><br>Calentamiento con coaches de Juventus Academy que vienen desde Italia, trabajo técnico, juego y cierre. Cada sesión sigue la metodología Juventus, en grupos pequeños por edad, y cada jugador recibe atención individual de los coaches.<br><br>📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM<br>📍 Colegio San Ángel, Puebla, Pue.<br>⚽ Niños y niñas de 6 a 17 años<br><br>No hace falta prueba previa. Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Un día en el ID Camp · 14–16 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="PUE_5">
+  <header><span class="num">5</span><h3>STATIC ASÍ SE VIVIÓ (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/PUE_5.jpg" alt="STATIC ASÍ SE VIVIÓ (Imagen) · Puebla"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Así se vivió Juventus en México este verano 🇮🇹⚽<br><br>Niños y niñas entrenando con coaches de Juventus y la metodología del club. En diciembre llega el Juventus ID Camp a Puebla, y le toca a tu hijo o hija.<br><br>📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM<br>📍 Colegio San Ángel, Puebla, Pue.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Llega el ID Camp a Puebla · 14–16 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="PUE_6">
+  <header><span class="num">6</span><h3>STATIC JUVENTUS WAY (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/PUE_6.jpg" alt="STATIC JUVENTUS WAY (Imagen) · Puebla"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Físico. Técnico. Táctico. ⚪⚫<br><br>Así se entrena al estilo Juventus, y este diciembre tu hijo o hija lo vive en Puebla, con coaches de Juventus Academy desde Italia. Tres días, las tres partes en cada sesión, adaptadas a cada edad.<br><br>📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM<br>📍 Colegio San Ángel, Puebla, Pue.<br>⚽ Niños y niñas de 6 a 17 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Estilo Juventus · Puebla, 14–16 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article>
+</section><section id="bay" class="sede" hidden>
+  <div class="ficha"><h2>Bayamón</h2><p>21–22 de diciembre · 5:00 PM – 8:30 PM · Bayamón Soccer Complex, Bayamón, PR · Niños y niñas de 6 a 16 años</p><p class="plan">En español, con Coaches y Juventus Way en inglés como anuncios de control (igual que Mayagüez).</p>
+  </div>
+  <div class="segm"><b class="segm-t">Cómo se configura en Meta (igual que las demás sedes)</b>
+    <dl>
+      <dt>Ubicación</dt><dd>Radio de <b>25 millas</b> alrededor de Bayamón (<a href="https://www.google.com/maps?q=18.3985,-66.1553" target="_blank" rel="noopener">ver el punto en el mapa</a>). Cubre el área metropolitana de San Juan (Bayamón, San Juan, Guaynabo, Cataño, Toa Baja, Carolina y Caguas). No se cruza con Mayagüez, que corre en el oeste de la isla.</dd>
+      <dt>A quién</dt><dd>Personas que viven en esa zona o que estuvieron allí hace poco.</dd>
+      <dt>Edad</dt><dd>Padres de <b>30 a 55 años</b> como público sugerido. Meta puede mostrarlo a otras edades si encuentra familias interesadas (Advantage+), igual que en las otras sedes.</dd>
+      <dt>Dónde se ve</dt><dd>Solo Facebook e Instagram: feed, historias y reels.</dd>
+      <dt>Objetivo</dt><dd>Registros en la web de la sede (botón Register Now), medidos con el píxel.</dd>
+      <dt>Cuenta</dt><dd>Juventus Camps USA, en la campaña de ID Camps.</dd>
+      <dt>Fechas</dt><dd>Desde que se encienda (previsto: miércoles 28 de octubre) hasta el 21 de diciembre, día en que empieza el camp.</dd>
+    </dl>
+  </div>
+  <div class="presu">
+    <div><b>Presupuesto</b><span class="big">USD 17 al día</span><small>54 días · unos USD 920 en total · según el plan de la campaña</small></div>
+    <div><b>Referencia</b><small class="hist">Camp de verano 2025-26 en Bayamón: USD 13,5 por registro en Meta.</small></div>
+  </div>
+  <article class="ad" data-id="BAY_1">
+  <header><span class="num">1</span><h3>HERO-POSTER (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/BAY_1.jpg" alt="HERO-POSTER (Imagen) · Bayamón"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">ATENCIÓN BAYAMÓN 👉 El Juventus ID Camp llega a Bayamón el 21 y 22 de diciembre.<br><br>Son dos días entrenando con coaches de Juventus Academy que vienen desde Italia, con la misma metodología con la que Juventus forma a los jugadores de su academia en Italia: trabajo físico, técnico y táctico, adaptado a cada edad.<br><br>📅 21 y 22 de diciembre · 5:00 PM – 8:30 PM<br>📍 Bayamón Soccer Complex, Bayamón, PR<br>⚽ Niños y niñas de 6 a 16 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Juventus ID Camp · Bayamón, 21–22 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad-video">
+  <header><span class="num">2</span><h3>VIDEO JESÚS (Video)</h3><span class="estado pendv">Pendiente</span></header>
+  <div class="cuerpo"><div class="media"><div class="ph"><b>Video de Jesús</b><span>Bayamón</span></div></div>
+  <div class="copy"><p>El video de Jesús para Bayamón todavía no está editado. Se agrega a esta página para aprobarlo junto con su texto apenas esté listo.</p></div></div>
+</article><article class="ad" data-id="BAY_3">
+  <header><span class="num">3</span><h3>STATIC COACHES (Imagen)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/BAY_3.jpg" alt="STATIC COACHES (Imagen) · Bayamón"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Juventus Academy coaches are flying in from Italy to train your player, without leaving Bayamón. 🇮🇹⚽<br><br>For two days, every session follows the Juventus methodology, and every player gets individual attention from the coaches.<br><br>📅 December 21–22 · 5:00 PM – 8:30 PM<br>📍 Bayamón Soccer Complex, Bayamón, PR<br>⚽ Boys and girls, ages 6–16<br><br>Tap Sign Up to register your player 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Coaches from Italy · Bayamón, Dec 21–22</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="BAY_4">
+  <header><span class="num">4</span><h3>STATIC UN DÍA EN EL ID CAMP (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/BAY_4.jpg" alt="STATIC UN DÍA EN EL ID CAMP (Imagen) · Bayamón"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Así es un día en el Juventus ID Camp ⚽<br><br>Calentamiento con coaches de Juventus Academy que vienen desde Italia, trabajo técnico, juego y cierre. Cada sesión sigue la metodología Juventus, en grupos pequeños por edad, y cada jugador recibe atención individual de los coaches.<br><br>📅 21 y 22 de diciembre · 5:00 PM – 8:30 PM<br>📍 Bayamón Soccer Complex, Bayamón, PR<br>⚽ Niños y niñas de 6 a 16 años<br><br>No hace falta prueba previa. Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Un día en el ID Camp · 21–22 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="BAY_5">
+  <header><span class="num">5</span><h3>STATIC ASÍ SE VIVIÓ (Imagen)</h3><span class="idi">Español</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/BAY_5.jpg" alt="STATIC ASÍ SE VIVIÓ (Imagen) · Bayamón"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Así se vivió Juventus en Puerto Rico 🇮🇹⚽<br><br>Niños y niñas entrenando con coaches de Juventus, aprendiendo y disfrutando cada sesión. Ahora el Juventus ID Camp vuelve a la isla, esta vez a Bayamón.<br><br>📅 21 y 22 de diciembre · 5:00 PM – 8:30 PM<br>📍 Bayamón Soccer Complex, Bayamón, PR<br>⚽ Niños y niñas de 6 a 16 años<br><br>Toca Registrarte e inscríbelo en línea 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">Ahora llega a Bayamón · 21–22 dic</div>
+      <div class="lbl">Botón</div><p class="btn">Registrarte (Sign Up)</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article><article class="ad" data-id="BAY_6">
+  <header><span class="num">6</span><h3>STATIC JUVENTUS WAY (Imagen)</h3><span class="idi">Inglés</span><span class="estado" data-estado>Lista</span></header>
+  <div class="cuerpo">
+    <div class="media"><img src="assets/BAY_6.jpg" alt="STATIC JUVENTUS WAY (Imagen) · Bayamón"></div>
+    <div class="copy">
+      <div class="lbl">Texto principal <span class="hint">· se puede editar</span></div>
+      <div class="tp ed" contenteditable="true" spellcheck="true" data-campo="texto">Physical. Technical. Tactical. ⚪⚫<br><br>That’s the Juventus way, and this December your player trains it in Bayamón, with Juventus Academy coaches from Italy. Two days, the three parts in every session, adapted to every age group.<br><br>📅 December 21–22 · 5:00 PM – 8:30 PM<br>📍 Bayamón Soccer Complex, Bayamón, PR<br>⚽ Boys and girls, ages 6–16<br><br>Tap Sign Up to register your player 👇</div>
+      <div class="lbl">Título <span class="hint">· se puede editar</span></div>
+      <div class="tit ed" contenteditable="true" spellcheck="true" data-campo="titulo">The Juventus Way · Bayamón, Dec 21–22</div>
+      <div class="lbl">Botón</div><p class="btn">Sign Up</p>
+      <div class="acciones">
+        <button type="button" class="aprobar" data-accion="aprobar">Aprobar</button>
+        <button type="button" class="sec" data-accion="nota">Dejar una nota</button>
+        <button type="button" class="sec deshacer" data-accion="restaurar" hidden>Volver al texto original</button>
+      </div>
+      <div class="nota" hidden><textarea rows="2" placeholder="Nota para este anuncio (opcional)"></textarea><button type="button" class="sec" data-accion="enviar-nota">Enviar nota</button></div>
+      <p class="aviso" data-aviso aria-live="polite"></p>
+    </div>
+  </div>
+</article>
+</section><footer>Juventus ID Camps · Revisión de anuncios de Puebla y Bayamón · 28-10-2026 · Página interna, no indexada.</footer>
+</div>
+<script>
+const CFG={"accion": "https://docs.google.com/forms/d/e/1FAIpQLSeGUY8Cv9Ea08X9HkdznY9pzVoUc4Gj-GdymsVTFP86wbE5sw/formResponse", "entry": {"pieza": 333677581, "cuenta": 724853821, "autor": 299801437, "comentario": 1175231019, "copy_corregido": 1649408514, "copy_original": 1637675582, "enviado": 909195940, "tipo": 1605073129, "zona": 1831673234, "fila": 1327618412}, "cuenta": "idcamps_puebay"};
+const ORIG={"PUE_1": {"texto": "ATENCIÓN PUEBLA 👉 El Juventus ID Camp llega a Puebla el 14, 15 y 16 de diciembre.\n\nSon tres días entrenando con coaches de Juventus Academy que vienen desde Italia, con la misma metodología con la que Juventus forma a los jugadores de su academia en Italia: trabajo físico, técnico y táctico, adaptado a cada edad.\n\n📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM\n📍 Colegio San Ángel, Puebla, Pue.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Juventus ID Camp · Puebla, 14–16 dic", "nombre": "HERO-POSTER (Imagen)"}, "PUE_3": {"texto": "Los coaches de Juventus Academy viajan desde Italia para entrenar a tu hijo o hija, sin salir de Puebla. 🇮🇹⚽\n\nDurante tres días, cada sesión sigue la metodología Juventus y cada jugador recibe atención individual de los coaches.\n\n📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM\n📍 Colegio San Ángel, Puebla, Pue.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Coaches desde Italia · 14–16 dic", "nombre": "STATIC COACHES (Imagen)"}, "PUE_4": {"texto": "Así es un día en el Juventus ID Camp ⚽\n\nCalentamiento con coaches de Juventus Academy que vienen desde Italia, trabajo técnico, juego y cierre. Cada sesión sigue la metodología Juventus, en grupos pequeños por edad, y cada jugador recibe atención individual de los coaches.\n\n📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM\n📍 Colegio San Ángel, Puebla, Pue.\n⚽ Niños y niñas de 6 a 17 años\n\nNo hace falta prueba previa. Toca Registrarte e inscríbelo en línea 👇", "titulo": "Un día en el ID Camp · 14–16 dic", "nombre": "STATIC UN DÍA EN EL ID CAMP (Imagen)"}, "PUE_5": {"texto": "Así se vivió Juventus en México este verano 🇮🇹⚽\n\nNiños y niñas entrenando con coaches de Juventus y la metodología del club. En diciembre llega el Juventus ID Camp a Puebla, y le toca a tu hijo o hija.\n\n📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM\n📍 Colegio San Ángel, Puebla, Pue.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Llega el ID Camp a Puebla · 14–16 dic", "nombre": "STATIC ASÍ SE VIVIÓ (Imagen)"}, "PUE_6": {"texto": "Físico. Técnico. Táctico. ⚪⚫\n\nAsí se entrena al estilo Juventus, y este diciembre tu hijo o hija lo vive en Puebla, con coaches de Juventus Academy desde Italia. Tres días, las tres partes en cada sesión, adaptadas a cada edad.\n\n📅 14, 15 y 16 de diciembre · 3:00 – 5:00 PM\n📍 Colegio San Ángel, Puebla, Pue.\n⚽ Niños y niñas de 6 a 17 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Estilo Juventus · Puebla, 14–16 dic", "nombre": "STATIC JUVENTUS WAY (Imagen)"}, "BAY_1": {"texto": "ATENCIÓN BAYAMÓN 👉 El Juventus ID Camp llega a Bayamón el 21 y 22 de diciembre.\n\nSon dos días entrenando con coaches de Juventus Academy que vienen desde Italia, con la misma metodología con la que Juventus forma a los jugadores de su academia en Italia: trabajo físico, técnico y táctico, adaptado a cada edad.\n\n📅 21 y 22 de diciembre · 5:00 PM – 8:30 PM\n📍 Bayamón Soccer Complex, Bayamón, PR\n⚽ Niños y niñas de 6 a 16 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Juventus ID Camp · Bayamón, 21–22 dic", "nombre": "HERO-POSTER (Imagen)"}, "BAY_3": {"texto": "Juventus Academy coaches are flying in from Italy to train your player, without leaving Bayamón. 🇮🇹⚽\n\nFor two days, every session follows the Juventus methodology, and every player gets individual attention from the coaches.\n\n📅 December 21–22 · 5:00 PM – 8:30 PM\n📍 Bayamón Soccer Complex, Bayamón, PR\n⚽ Boys and girls, ages 6–16\n\nTap Sign Up to register your player 👇", "titulo": "Coaches from Italy · Bayamón, Dec 21–22", "nombre": "STATIC COACHES (Imagen)"}, "BAY_4": {"texto": "Así es un día en el Juventus ID Camp ⚽\n\nCalentamiento con coaches de Juventus Academy que vienen desde Italia, trabajo técnico, juego y cierre. Cada sesión sigue la metodología Juventus, en grupos pequeños por edad, y cada jugador recibe atención individual de los coaches.\n\n📅 21 y 22 de diciembre · 5:00 PM – 8:30 PM\n📍 Bayamón Soccer Complex, Bayamón, PR\n⚽ Niños y niñas de 6 a 16 años\n\nNo hace falta prueba previa. Toca Registrarte e inscríbelo en línea 👇", "titulo": "Un día en el ID Camp · 21–22 dic", "nombre": "STATIC UN DÍA EN EL ID CAMP (Imagen)"}, "BAY_5": {"texto": "Así se vivió Juventus en Puerto Rico 🇮🇹⚽\n\nNiños y niñas entrenando con coaches de Juventus, aprendiendo y disfrutando cada sesión. Ahora el Juventus ID Camp vuelve a la isla, esta vez a Bayamón.\n\n📅 21 y 22 de diciembre · 5:00 PM – 8:30 PM\n📍 Bayamón Soccer Complex, Bayamón, PR\n⚽ Niños y niñas de 6 a 16 años\n\nToca Registrarte e inscríbelo en línea 👇", "titulo": "Ahora llega a Bayamón · 21–22 dic", "nombre": "STATIC ASÍ SE VIVIÓ (Imagen)"}, "BAY_6": {"texto": "Physical. Technical. Tactical. ⚪⚫\n\nThat’s the Juventus way, and this December your player trains it in Bayamón, with Juventus Academy coaches from Italy. Two days, the three parts in every session, adapted to every age group.\n\n📅 December 21–22 · 5:00 PM – 8:30 PM\n📍 Bayamón Soccer Complex, Bayamón, PR\n⚽ Boys and girls, ages 6–16\n\nTap Sign Up to register your player 👇", "titulo": "The Juventus Way · Bayamón, Dec 21–22", "nombre": "STATIC JUVENTUS WAY (Imagen)"}};
+
+const LSK='idc_puebay_v1';
+const LS={get(){try{return JSON.parse(localStorage.getItem(LSK)||'{}')}catch(e){return {}}},set(v){try{localStorage.setItem(LSK,JSON.stringify(v))}catch(e){}}};
+const norm=t=>(t||'').replace(/\u00a0/g,' ').split('\n').map(l=>l.trim()).join('\n').replace(/\n{3,}/g,'\n\n').trim();
+function leer(ad){return {texto:norm(ad.querySelector('[data-campo="texto"]').innerText),titulo:norm(ad.querySelector('[data-campo="titulo"]').innerText)}}
+function cambiado(ad){const o=ORIG[ad.dataset.id],v=leer(ad);return v.texto!==norm(o.texto)||v.titulo!==norm(o.titulo)}
+function pintar(ad){const c=cambiado(ad),b=ad.querySelector('.aprobar');b.textContent=c?'Aprobar con texto corregido':'Aprobar';b.classList.toggle('copy',c);
+  ad.querySelector('.deshacer').hidden=!c;ad.querySelectorAll('.ed').forEach(e=>e.classList.toggle('cambiado',norm(e.innerText)!==norm(ORIG[ad.dataset.id][e.dataset.campo])))}
+async function enviar(reg){const f=new URLSearchParams();for(const k in CFG.entry)f.append('entry.'+CFG.entry[k],reg[k]??'');
+  try{await fetch(CFG.accion,{method:'POST',mode:'no-cors',body:f});return true}catch(e){return false}}
+function marcar(ad,txt){ad.classList.add('aprobado');ad.querySelector('[data-estado]').textContent=txt}
+async function aprobar(ad){const id=ad.dataset.id,c=cambiado(ad),v=leer(ad),o=ORIG[id];
+  const reg={pieza:id,cuenta:CFG.cuenta,autor:'Alessandro',tipo:c?'aprobado_copy':'aprobado',comentario:'',copy_original:JSON.stringify({texto:o.texto,titulo:o.titulo}),
+    copy_corregido:c?JSON.stringify(v):'',enviado:new Date().toISOString(),zona:'',fila:''};
+  const av=ad.querySelector('[data-aviso]');av.textContent='Guardando…';
+  if(!await enviar(reg)){av.textContent='No se pudo guardar. Revise la conexión e intente de nuevo.';return}
+  const st=LS.get();st[id]={tipo:reg.tipo,v:c?v:null,hora:reg.enviado};LS.set(st);
+  marcar(ad,c?'Aprobado con texto corregido':'Aprobado');av.textContent='Guardado.';contar()}
+async function nota(ad){const ta=ad.querySelector('.nota textarea'),t=ta.value.trim();if(!t)return;const av=ad.querySelector('[data-aviso]');av.textContent='Enviando…';
+  const ok=await enviar({pieza:ad.dataset.id,cuenta:CFG.cuenta,autor:'Alessandro',tipo:'comentario',comentario:t,copy_original:'',copy_corregido:cambiado(ad)?JSON.stringify(leer(ad)):'',enviado:new Date().toISOString(),zona:'',fila:''});
+  av.textContent=ok?'Nota enviada.':'No se pudo enviar la nota.';if(ok){ta.value='';ad.querySelector('.nota').hidden=true}}
+function contar(){document.querySelectorAll('.sede').forEach(s=>{const n=s.querySelectorAll('.ad').length,ap=s.querySelectorAll('.ad.aprobado').length;
+  const c=s.querySelector('.todo .cuenta');if(c)c.textContent=ap+' de '+n+' anuncios aprobados';const b=s.querySelector('.todo button');if(b)b.hidden=ap===n})}
+document.querySelectorAll('.ad').forEach(ad=>{ad.querySelectorAll('.ed').forEach(e=>e.addEventListener('input',()=>pintar(ad)));
+  ad.addEventListener('click',ev=>{const a=ev.target.closest('[data-accion]');if(!a)return;const k=a.dataset.accion;
+    if(k==='aprobar')aprobar(ad);
+    else if(k==='nota'){const n=ad.querySelector('.nota');n.hidden=!n.hidden;if(!n.hidden)n.querySelector('textarea').focus()}
+    else if(k==='enviar-nota')nota(ad);
+    else if(k==='restaurar'){const o=ORIG[ad.dataset.id];ad.querySelector('[data-campo="texto"]').innerText=o.texto;ad.querySelector('[data-campo="titulo"]').innerText=o.titulo;pintar(ad)}})});
+document.querySelectorAll('.sede').forEach(s=>{const d=document.createElement('div');d.className='todo';d.innerHTML='<span class="cuenta"></span><button type="button">Aprobar todos los que faltan de esta sede</button>';
+  s.querySelector('.presu').after(d);d.querySelector('button').addEventListener('click',async()=>{for(const ad of s.querySelectorAll('.ad:not(.aprobado)'))await aprobar(ad)})});
+function aplicar(st){for(const id in st){const ad=document.querySelector('.ad[data-id="'+id+'"]');if(!ad)continue;const x=st[id];
+  if(x.v){ad.querySelector('[data-campo="texto"]').innerText=x.v.texto;ad.querySelector('[data-campo="titulo"]').innerText=x.v.titulo;pintar(ad)}
+  if(x.tipo&&x.tipo.indexOf('aprobado')===0)marcar(ad,x.tipo==='aprobado_copy'?'Aprobado con texto corregido':'Aprobado')}contar()}
+aplicar(LS.get());
+fetch('estado.json?t='+Date.now()).then(r=>r.ok?r.json():{}).then(j=>{if(j&&typeof j==='object')aplicar(j)}).catch(()=>{});
+(function(){function ver(s){document.querySelectorAll('.sede').forEach(e=>{e.hidden=e.id!==s});document.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.s===s))}
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{ver(b.dataset.s);try{history.replaceState(null,'','#'+b.dataset.s)}catch(e){}window.scrollTo(0,0)}));
+if((location.hash||'').slice(1)==='bay')ver('bay')})();
+</script></body></html>
